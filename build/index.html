@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Template</title>
+    <title>Shopcade</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
@@ -17,60 +17,89 @@
 
     <header class="header">
 
-        <nav class="mainNav">
+        <div class="topBar">
 
-            <ul class="mainNav__list">
+            <h1 class="header__logo">
+                <img src="" />
+            </h1>
 
-                <li class="mainNav__item">
-                    <a class="mainNav__link mainNav__link--home" href="#.html">Home</a>
-                </li>
-                <li class="mainNav__item">
-                    <a class="mainNav__link mainNav__link--about" href="#.html">About</a>
-                </li>
-                <li class="mainNav__item">
-                    <a class="mainNav__link mainNav__link--contact" href="#.html">Contact</a>
-                </li>
+            <div class="topLinks">
 
-            </ul>
+                <ul class="headerIcons">
+                    <li class="country">
+                        <img class="country_gbr" src="" />
+                    </li>
+                    <li class="basket">
+                        <img class="basket__icon" src="" />
+                    </li>
+                </ul>
 
-        </nav>
+                <ul class="headerAuth">
+                    <li>
+                        <a class="headerAuth__link" href="#">Register</a>
+                    </li>
+                    <li>
+                        <a class="headerAuth__link" href="#">Log in</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="navContainer">
+
+            <nav class="mainNav">
+
+                <ul class="mainNav__list">
+
+                    <li class="mainNav__item">
+                        <a class="mainNav__link" href="#">Trending</a>
+                    </li>
+                    <li class="mainNav__item">
+                        <a class="mainNav__link" href="#">Celebs</a>
+                    </li>
+                    <li class="mainNav__item">
+                        <a class="mainNav__link" href="#">Fashion</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <div class="searchContainer">
+                <span class="search__icon"></span>
+                <input class="search__input" type="text" name="search" id="search" placeholder="Search" />
+            </div>
+
+        </div>
 
     </header>
 
-
-	<div class="content">
-
-        <h1>HTML Ipsum Presents</h1>
+    <main class="content">
 
 
-        <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+    <div class="breadcrumbs">
+        <a class="breadcrumb__link" href="#">Fashion</a> /
+        <a class="breadcrumb__link" href="#">Women</a> /
+        <a class="breadcrumb__link" href="#">Dress</a> /
+        <span class="breadcrumb__active">Anthea cut out dress</span>
+    </div>
 
-        <h2>Header Level 2</h2>
+	<div class="productContent">
 
-        <ol>
-            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-            <li>Aliquam tincidunt mauris eu risus.</li>
-        </ol>
+        <div class="product__gallery">
 
-        <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+            GALLERY
 
-        <h3>Header Level 3</h3>
+        </div>
 
-        <ul>
-            <li>  ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-            <li>Aliquam tincidunt mauris eu risus.</li>
-        </ul>
+        <div class="product__details">
 
-<pre><code>
-    #header h1 a {
-    display: block;
-    width: 300px;
-    height: 80px;
-    }
-</code></pre>
+            <h2 class="product__title">Anthea cut out dress</h2>
+            <h3 class="product__brand">by <strong>Missguided</strong></h3>
 
-
-        <img src="https://placekitten.com/1280/720" alt="Kitten" title="Kitten" />
+        </div>
 
 	</div>
 
@@ -79,6 +108,8 @@
     // Page specific JS
 
 </script>
+
+    </main>
 
     <footer class="footer">
 

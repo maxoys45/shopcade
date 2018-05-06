@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Template</title>
+    <title>Shopcade</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
@@ -17,22 +17,63 @@
 
     <header class="header">
 
-        <nav class="mainNav">
+        <div class="topBar">
 
-            <ul class="mainNav__list">
+            <h1 class="header__logo">
+                <img src="" />
+            </h1>
 
-                <li class="mainNav__item">
-                    <a class="mainNav__link mainNav__link--home" href="#.html">Home</a>
-                </li>
-                <li class="mainNav__item">
-                    <a class="mainNav__link mainNav__link--about" href="#.html">About</a>
-                </li>
-                <li class="mainNav__item">
-                    <a class="mainNav__link mainNav__link--contact" href="#.html">Contact</a>
-                </li>
+            <div class="topLinks">
 
-            </ul>
+                <ul class="headerIcons">
+                    <li class="country">
+                        <img class="country_gbr" src="" />
+                    </li>
+                    <li class="basket">
+                        <img class="basket__icon" src="" />
+                    </li>
+                </ul>
 
-        </nav>
+                <ul class="headerAuth">
+                    <li>
+                        <a class="headerAuth__link" href="#">Register</a>
+                    </li>
+                    <li>
+                        <a class="headerAuth__link" href="#">Log in</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="navContainer">
+
+            <nav class="mainNav">
+
+                <ul class="mainNav__list">
+
+                    <li class="mainNav__item">
+                        <a class="mainNav__link" href="#">Trending</a>
+                    </li>
+                    <li class="mainNav__item">
+                        <a class="mainNav__link" href="#">Celebs</a>
+                    </li>
+                    <li class="mainNav__item">
+                        <a class="mainNav__link" href="#">Fashion</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <div class="searchContainer">
+                <span class="search__icon"></span>
+                <input class="search__input" type="text" name="search" id="search" placeholder="Search" />
+            </div>
+
+        </div>
 
     </header>
+
+    <main class="content">
