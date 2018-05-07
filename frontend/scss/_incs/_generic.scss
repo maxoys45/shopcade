@@ -24,24 +24,24 @@ h1, h2, h3, h4 {
 	line-height : $lineHeight--default;
 }
 
-h1 {
-	font-size     : 4.8em;
-	margin-bottom : .8em;
-}
-
 h2 {
-	font-size     : 4em;
-	margin-bottom : .2em;
+	font-size     : 2em;
+	margin-bottom : .1em;
+	text-transform: uppercase;
+	font-weight:$font--bold;
 
 	@include bp($scr--phablet) {
-	    font-size:5em;
+	    font-size:2.5em;
 	}
-
 }
 
 h3 {
-	font-size     : 2.1em;
-	margin-bottom : .5em;
+	font-size     : 1.6em;
+	margin-bottom : .1em;
+
+	@include bp($scr--phablet) {
+		font-size:1.8em;
+	}
 }
 
 h4 {
@@ -66,11 +66,6 @@ p {
 		@extend .anchor;
 		font-weight :$font--reg;
 	}
-
-	@include bp($scr--phablet) {
-	    font-size:$fontSize--default;
-	}
-
 }
 
 .anchor {
@@ -83,6 +78,10 @@ p {
 a {
 	text-decoration : none;
 	color           : inherit;
+}
+
+.link {
+	text-decoration: underline;
 }
 
 img {
@@ -101,13 +100,13 @@ strong {
 .input--default {
 	@include inline-block;
 	cursor          : default;
-	border          : 1px solid $grey--light;
-	border-radius   : $radius;
+//	border          : 1px solid $grey--light;
+//	border-radius   : $radius;
 	background      : $white;
 	padding         : 1.5rem 1rem;
 	font-size       : $fontSize--default;
 	outline         : none;
-	color           : $grey--darker;
+//	color           : $grey--darker;
 	text-align      : left;
 	position        : relative;
 	min-width       : 150px;
@@ -119,7 +118,7 @@ strong {
 	}
 
 	&:focus, &:active {
-		border-color : $turquoise;
+//		border-color : $turquoise;
 	}
 }
 
@@ -128,7 +127,6 @@ strong {
 	border     : none;
 	background : none;
 	padding    : 0;
-	cursor     : pointer;
 	outline    : none;
 }
 
@@ -141,12 +139,18 @@ strong {
 	z-index  : -1;
 }
 
+.hideText {
+	text-indent: 100%;
+	overflow:hidden;
+	white-space: nowrap;
+}
+
 .justify {
 	text-align : justify;
 }
 
 .wrapped {
-	max-width    : $wrap + px;
+//	max-width    : $wrap + px;
 	margin-left  : auto;
 	margin-right : auto;
 }

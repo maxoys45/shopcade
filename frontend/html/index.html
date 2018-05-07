@@ -1,17 +1,59 @@
 @@include('includes/header.html', { "pageClass" : "page__home" })
 
     <div class="breadcrumbs">
-        <a class="breadcrumb__link" href="#">Fashion</a> /
-        <a class="breadcrumb__link" href="#">Women</a> /
-        <a class="breadcrumb__link" href="#">Dress</a> /
-        <span class="breadcrumb__active">Anthea cut out dress</span>
+        <a class="breadcrumbs__link" href="#">Fashion</a> /
+        <a class="breadcrumbs__link" href="#">Women</a> /
+        <a class="breadcrumbs__link" href="#">Dress</a> /
+        <span class="breadcrumbs__active">Anthea cut out dress</span>
     </div>
 
 	<div class="productContent">
 
         <div class="product__gallery">
 
-            GALLERY
+            <div class="product__viewer">
+
+                <ul class="product__thumbnail-list">
+                    <li class="product__thumbnail-item">
+                        <img class="product__thumbnail-img" src="https://placeimg.com/200/270/people" />
+                    </li>
+                    <li class="product__thumbnail-item">
+                        <img class="product__thumbnail-img" src="https://placeimg.com/200/270/people" />
+                    </li>
+                    <li class="product__thumbnail-item">
+                        <img class="product__thumbnail-img" src="https://placeimg.com/200/270/people" />
+                    </li>
+                    <li class="product__thumbnail-item">
+                        <img class="product__thumbnail-img" src="https://placeimg.com/200/270/people" />
+                    </li>
+                    <li class="product__thumbnail-item">
+                        <img class="product__thumbnail-img" src="https://placeimg.com/200/270/people" />
+                    </li>
+                    <li class="product__thumbnail-item">
+                        <button class="product__nextImageBtn"></button>
+                    </li>
+                </ul>
+
+                <div class="product__preview">
+                    <img class="product__preview-img" src="https://placeimg.com/600/800/people" />
+
+                    <div class="product__hashtags">
+                        TAGS: <strong>#missguided #dress #pink #long #black #missguided #dress #pink #long #black</strong>
+                    </div>
+
+                    <ul class="product__social-list">
+
+                        @@loop('includes/product-social.html', [
+                            { "social" : "facebook", "link" : "#" },
+                            { "social" : "twitter", "link" : "#" },
+                            { "social" : "pinterest", "link" : "#" },
+                            { "social" : "googleplus", "link" : "#" }
+                        ])
+
+                    </ul>
+                </div>
+
+            </div>
 
         </div>
 
@@ -19,6 +61,114 @@
 
             <h2 class="product__title">Anthea cut out dress</h2>
             <h3 class="product__brand">by <strong>Missguided</strong></h3>
+
+            <div class="product__priceRatingContainer">
+
+                <div class="product__price">£ 36.00</div>
+
+                <ul class="product__rating">
+                    <li class="star active"></li>
+                    <li class="star active"></li>
+                    <li class="star active"></li>
+                    <li class="star active"></li>
+                    <li class="star"></li>
+                </ul>
+
+            </div>
+
+            <div class="product__options">
+
+                <div class="product__optionContainer">
+
+                    <div class="product__option-title">Colours:</div>
+
+                    <ul class="product__option-list">
+
+                        @@loop('includes/product-option.html', [
+                            { "value" : "colour-black", "name" : "colour", "id": "colour-black", "checked" : "checked", "disabled": "", "optionType": "product__colour", "text" : "Black" },
+                            { "value" : "colour-blue", "name" : "colour", "id": "colour-blue", "checked" : "", "disabled": "", "optionType": "product__colour", "text" : "Blue" }
+                        ])
+
+                    </ul>
+
+                </div>
+
+                <div class="product__optionContainer">
+
+                    <div class="product__option-title">Size:</div>
+
+                    <ul class="product__option-list">
+
+                        @@loop('includes/product-option.html', [
+                            { "value" : "size-4", "name" : "size", "id": "size-4", "checked" : "", "disabled" : "disabled", "optionType": "product__size", "text" : "4" },
+                            { "value" : "size-6", "name" : "size", "id": "size-6", "checked" : "", "disabled" : "", "optionType": "product__size", "text" : "6" },
+                            { "value" : "size-8", "name" : "size", "id": "size-8", "checked" : "", "disabled" : "", "optionType": "product__size", "text" : "8" },
+                            { "value" : "size-10", "name" : "size", "id": "size-10", "checked" : "", "disabled" : "disabled", "optionType": "product__size", "text" : "10" },
+                            { "value" : "size-12", "name" : "size", "id": "size-12", "checked" : "", "disabled" : "", "optionType": "product__size", "text" : "12" },
+                            { "value" : "size-14", "name" : "size", "id": "size-14", "checked" : "", "disabled" : "", "optionType": "product__size", "text" : "14" }
+                        ])
+                    </ul>
+
+                    <a class="link" href="#">View size guide</a>
+
+                </div>
+
+            </div>
+
+            <div class="product__ctas">
+                <button class="btn btn-with-icon btn-red btn-cart">Add to cart</button>
+                <button class="btn btn-with-icon btn-like">I like it</button>
+            </div>
+
+            <ul class="product__errors">
+                <li class="product__error">* Please select a size</li>
+            </ul>
+
+            <ul class="product__infoContainer">
+
+                <li class="product__info-item expanded">
+
+                    <div class="product__info-title">Description</div>
+
+                    <div class="product__info-copy">
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores aut, debitis dicta eaque eos est excepturi hic iste molestiae nam, odit porro quae quis quod ratione, sint. Modi, quisquam?</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus aliquam corporis deserunt eius, eligendi et illo ipsam iure magnam neque nulla odio praesentium quas quia ratione, recusandae sapiente sit?</p>
+
+                    </div>
+
+                </li>
+
+                <li class="product__info-item">
+
+                    <div class="product__info-title">Delivery & Returns</div>
+
+                    <div class="product__info-copy">
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores aut, debitis dicta eaque eos est excepturi hic iste molestiae nam, odit porro quae quis quod ratione, sint. Modi, quisquam?</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus aliquam corporis deserunt eius, eligendi et illo ipsam iure magnam neque nulla odio praesentium quas quia ratione, recusandae sapiente sit?</p>
+
+                    </div>
+
+                </li>
+
+                <li class="product__info-item">
+
+                    <div class="product__info-title">Activity</div>
+
+                    <div class="product__info-copy">
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores aut, debitis dicta eaque eos est excepturi hic iste molestiae nam, odit porro quae quis quod ratione, sint. Modi, quisquam?</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus aliquam corporis deserunt eius, eligendi et illo ipsam iure magnam neque nulla odio praesentium quas quia ratione, recusandae sapiente sit?</p>
+
+                    </div>
+
+                </li>
+
+            </ul>
 
         </div>
 
