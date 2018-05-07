@@ -1,1 +1,1 @@
-# template
+# HTML Layout for Shopcade product page.
